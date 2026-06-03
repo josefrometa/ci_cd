@@ -1,5 +1,6 @@
 name: saludo
-
+env:
+  GLOBAL_DATA: "dato global"
 on: 
   push:
     branches:
@@ -23,5 +24,6 @@ jobs:
           echo " 2 evento: ${{ github.event_name }} "
           echo " 3 repo: ${{ github.repository }} "
           echo " 4 ref: ${{ github.ref_name }} "
+          echo " 5 global: $GLOBAL_DATA "
           
       
