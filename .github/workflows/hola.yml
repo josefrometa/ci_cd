@@ -16,5 +16,7 @@ jobs:
         run: echo "hola desde github actions" 
 
       - name: mostrar perfil
-        run: echo " author: ${{ github.actor }} "
+        run: |
+          echo " autor: ${{ github.actor }} "
+          
       
