@@ -18,5 +18,8 @@ jobs:
       - name: mostrar perfil
         run: |
           echo " autor: ${{ github.actor }} "
+          echo "evento: ${{ github.event_name }} "
+          echo "repo: ${{ github.repository }} "
+          echo "ref: ${{ github.ref_name }} "
           
       
