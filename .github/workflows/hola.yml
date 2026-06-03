@@ -16,10 +16,12 @@ jobs:
         run: echo "hola desde github actions" 
 
       - name: mostrar perfil
+        env:
+          USUARIO_ACTUAL: ${{ github.actor }}
         run: |
-          echo " autor: ${{ github.actor }} "
-          echo "evento: ${{ github.event_name }} "
-          echo "repo: ${{ github.repository }} "
-          echo "ref: ${{ github.ref_name }} "
+          echo " 1 autor: $USUARIO_ACTUAL "
+          echo " 2 evento: ${{ github.event_name }} "
+          echo " 3 repo: ${{ github.repository }} "
+          echo " 4 ref: ${{ github.ref_name }} "
           
       
